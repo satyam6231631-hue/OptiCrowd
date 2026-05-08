@@ -1,0 +1,75 @@
+.result-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+  border: 1px solid #d9e3ed;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.result-card.medium {
+  border-color: #f4d68c;
+  background: #fffaf0;
+}
+
+.result-card.high {
+  border-color: #f7b4b4;
+  background: #fff5f5;
+}
+
+.result-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 8px;
+  background: #e9fbf4;
+  color: #0f8b6f;
+}
+
+.result-card.medium .result-icon {
+  background: #fff0c2;
+  color: #9a6700;
+}
+
+.result-card.high .result-icon {
+  background: #ffe1e1;
+  color: #bd2c2c;
+}
+
+.result-copy {
+  min-width: 0;
+}
+
+.result-card h2 {
+  margin: 4px 0 7px;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.result-card h2 span {
+  color: #0f8b6f;
+  font-size: 2.2rem;
+}
+
+.result-card.medium h2 span {
+  color: #a96800;
+}
+
+.result-card.high h2 span {
+  color: #bd2c2c;
+}
+
+.result-text {
+  color: #5a6577;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 420px) {
+  .result-card {
+    grid-template-columns: 1fr;
+  }
+}

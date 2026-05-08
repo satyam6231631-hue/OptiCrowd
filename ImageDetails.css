@@ -1,0 +1,34 @@
+.image-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 0;
+}
+
+.image-details div {
+  min-width: 0;
+  border: 1px solid #d9e3ed;
+  border-radius: 8px;
+  background: #f8fbfe;
+  padding: 13px 14px;
+}
+
+.image-details dt {
+  color: #738197;
+  font-size: 0.7rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.image-details dd {
+  color: #14273b;
+  font-weight: 850;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.image-details.muted dd {
+  color: #95a1b2;
+}
