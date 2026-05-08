@@ -1,0 +1,23 @@
+.intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.intro h1 {
+  margin: 8px 0 10px;
+}
+
+.intro p:last-child {
+  max-width: 620px;
+  color: #5a6577;
+  font-size: 1.02rem;
+}
+
+@media (max-width: 860px) {
+  .intro {
+    display: grid;
+  }
+}
