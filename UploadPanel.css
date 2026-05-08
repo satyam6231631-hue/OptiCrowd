@@ -1,0 +1,145 @@
+.upload-panel {
+  display: grid;
+  gap: 18px;
+  border: 1px solid #d7e0ea;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 55px rgba(20, 39, 59, 0.1);
+  padding: 22px;
+}
+
+.file-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #bdebdc;
+  border-radius: 999px;
+  background: #ecfdf6;
+  color: #08765d;
+  font-size: 0.86rem;
+  font-weight: 800;
+  padding: 9px 13px;
+}
+
+.upload-box {
+  position: relative;
+  display: grid;
+  min-height: 178px;
+  place-items: center;
+  gap: 8px;
+  border: 1.5px dashed #9db0c4;
+  border-radius: 8px;
+  background: #f8fbfe;
+  color: #26364a;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 22px;
+  text-align: center;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.upload-box:hover {
+  border-color: #0f8b6f;
+  background: #f2fbf7;
+  transform: translateY(-1px);
+}
+
+.upload-box:focus-within {
+  border-color: #0f8b6f;
+  outline: 3px solid rgba(15, 139, 111, 0.18);
+  outline-offset: 2px;
+}
+
+.upload-box.compact {
+  min-height: 88px;
+  grid-template-columns: auto 1fr;
+  justify-items: start;
+  text-align: left;
+}
+
+.upload-box svg {
+  color: #0f8b6f;
+}
+
+.upload-box small {
+  color: #738197;
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.upload-box.compact small {
+  grid-column: 2;
+}
+
+.upload-box input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.preview-frame,
+.empty-preview {
+  overflow: hidden;
+  border: 1px solid #d7e0ea;
+  border-radius: 8px;
+  background: #eef3f8;
+}
+
+.preview-frame {
+  aspect-ratio: 16 / 10;
+}
+
+.preview-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.empty-preview {
+  display: grid;
+  min-height: 320px;
+  place-items: center;
+  align-content: center;
+  gap: 12px;
+  color: #6a7789;
+  font-weight: 800;
+}
+
+.empty-preview svg {
+  color: #8aa0b8;
+}
+
+.error-message {
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fff1f2;
+  color: #b91c1c;
+  font-weight: 800;
+  margin: 0;
+  padding: 12px 14px;
+}
+
+@media (max-width: 640px) {
+  .upload-panel {
+    padding: 16px;
+  }
+
+  .upload-box.compact {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .upload-box.compact small {
+    grid-column: auto;
+  }
+
+  .empty-preview {
+    min-height: 220px;
+  }
+}
